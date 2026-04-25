@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#dcfce7" />
+  <rect width="380" height="280" x="10" y="10" fill="none" stroke="#166534" stroke-width="4" stroke-opacity="0.2" rx="20" />
+  
+  <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-family="serif" font-size="80" fill="#166534">🌿</text>
+  <text x="50%" y="75%" dominant-baseline="middle" text-anchor="middle" font-family="serif" font-size="32" font-weight="bold" fill="#166534">Fresh Spinach</text>
+</svg>

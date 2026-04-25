@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 50px;
+  box-sizing: border-box; /* Ensures padding is included in width */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Changed to center content distribution */
+  
+  font-family: 'Playfair Display', serif;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark background */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.logo {
+  flex: 1; /* Take up available space on left */
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ecfccb; /* Changed to match village theme (light green) */
+  text-decoration: none;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #c79a3b;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #fff; 
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.cta-buttons {
+  flex: 1; /* Take up available space on right */
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 20px;
+  align-items: center; /* Ensure vertical alignment */
+}
+
+.btn {
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.5px;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Distinct Login Button Style */
+.btn-login {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Subtle border */
+  color: #fff;
+}
+
+.btn-login:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Distinct Cart Button Style */
+.btn-cart {
+  background: linear-gradient(135deg, #c79a3b, #d4af37); /* Gold gradient */
+  border: none;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(199, 154, 59, 0.4);
+}
+
+.btn-cart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(199, 154, 59, 0.6);
+  background: linear-gradient(135deg, #d4af37, #c79a3b); /* Slightly brighter on hover */
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%; /* Full screen on mobile */
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.95); /* Dark overlay */
+        backdrop-filter: blur(15px);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .mobile-nav-links {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 80%;
+    }
+
+    .mobile-nav-links li a {
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
