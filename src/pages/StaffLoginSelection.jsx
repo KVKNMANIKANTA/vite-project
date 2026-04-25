@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { motion } from 'framer-motion';
 
+const B = import.meta.env.BASE_URL;
+
 const StaffLoginSelection = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -24,7 +26,7 @@ const StaffLoginSelection = () => {
       alignItems: 'center', 
       flexDirection: 'column', 
       gap: '2rem',
-      background: "linear-gradient(rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.3)), url('/images/adminn.png') no-repeat center center / cover"
+      background: `linear-gradient(rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.3)), url('${B}images/adminn.png') no-repeat center center / cover`
     }}>
       <motion.div 
         initial={{ opacity: 0, scale: 0.9, y: 20 }}

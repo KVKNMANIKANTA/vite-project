@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const B = import.meta.env.BASE_URL;
+
 const About = () => {
   return (
     <div style={{ minHeight: '100vh', paddingTop: '100px', paddingBottom: '40px', fontFamily: "'Playfair Display', serif" }}>
@@ -40,7 +42,7 @@ const About = () => {
         >
              {/* Farm Video */}
              <video 
-               src="/videos/v1.mp4" 
+               src={`${B}videos/v1.mp4`} 
                autoPlay 
                muted 
                loop 

@@ -6,6 +6,8 @@ import { Menu, X, ShoppingBag } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Navbar.css';
 
+const B = import.meta.env.BASE_URL;
+
 const Navbar = () => {
   const { user, logout } = useAuth();
   const { cartCount } = useCart();
@@ -34,7 +36,7 @@ const Navbar = () => {
       <Link to="/" className="logo" onClick={() => setIsOpen(false)} style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
         <div style={{ position: 'relative', width: '120px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <img 
-            src="/images/orglogo.png" 
+            src={`${B}images/orglogo.png`} 
             alt="Organic Home" 
             style={{ 
               height: '110px', /* Maintained size */

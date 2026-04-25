@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const B = import.meta.env.BASE_URL;
+
 const HomeStory = () => {
   return (
     <div style={{ 
@@ -93,7 +95,7 @@ const HomeStory = () => {
               default: { duration: 0.6, delay: 0.4 }
             }}
           >
-             <img src="/images/img1.png" alt="Our Farm" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }} />
+             <img src={`${B}images/img1.png`} alt="Our Farm" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }} />
           </motion.div>
         </div>
       </motion.div>

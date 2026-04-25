@@ -8,6 +8,8 @@ import { useAuth } from '../context/AuthContext';
 import { products } from '../data/mockData';
 import './CalfChatbot.css';
 
+const B = import.meta.env.BASE_URL;
+
 /* ─── Flat product list for matching ─── */
 const allProducts = [
   ...products.dairy,
@@ -28,7 +30,7 @@ function findProduct(text) {
 /* ─── Calf Image Icon ─── */
 const CalfIcon = ({ size = 42 }) => (
   <img
-    src="/images/chatbot.png"
+    src={`${B}images/chatbot.png`}
     alt="Gowri the Calf"
     width={size}
     height={size}

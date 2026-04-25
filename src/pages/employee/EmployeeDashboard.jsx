@@ -5,6 +5,8 @@ import { useStaff } from '../../context/StaffContext'; // Import StaffContext
 import { CheckCircle, Clock, Coffee, LogOut, Sun, Moon, Sunset, Sunrise, Calendar, AlertCircle, Users, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const B = import.meta.env.BASE_URL;
+
 const EmployeeDashboard = () => {
     const { user, logout } = useAuth();
     const { employees, tasks, leaveRequests, updateEmployeeStatus, updateTaskStatus, submitLeaveRequest } = useStaff(); // Use Context
@@ -73,7 +75,7 @@ const EmployeeDashboard = () => {
             {/* Sidebar / Status Panel */}
             <div style={{ 
                 width: '300px', 
-                background: "linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.4)), url('/images/adminn.png') no-repeat center center / cover", 
+                background: `linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.4)), url('${B}images/adminn.png') no-repeat center center / cover`, 
                 color: 'white', 
                 padding: '30px', 
                 display: 'flex', 
@@ -160,7 +162,7 @@ const EmployeeDashboard = () => {
             <div style={{ 
                 flex: 1, 
                 padding: '40px', 
-                background: "linear-gradient(rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.3)), url('/images/adminn.png') no-repeat center center / cover", 
+                background: `linear-gradient(rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.3)), url('${B}images/adminn.png') no-repeat center center / cover`, 
                 overflowY: 'auto' 
             }}>
                 <header style={{ marginBottom: '30px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -272,7 +274,7 @@ const EmployeeDashboard = () => {
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.9, opacity: 0 }}
                             style={{ 
-                                background: "linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.5)), url('/images/adminn.png') no-repeat center center / cover", 
+                                background: `linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.5)), url('${B}images/adminn.png') no-repeat center center / cover`, 
                                 padding: '30px', 
                                 borderRadius: '16px', 
                                 width: '400px', 

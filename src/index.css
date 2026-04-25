@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
   
   /* Global Background */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/images/img1.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../public/images/img1.png');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

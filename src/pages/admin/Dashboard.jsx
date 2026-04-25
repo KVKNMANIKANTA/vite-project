@@ -6,6 +6,8 @@ import { products as mockProducts, orders } from '../../data/mockData';
 import { Package, Users, ShoppingCart, Activity, LogOut, Plus, X, CheckSquare, Calendar, AlertCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const B = import.meta.env.BASE_URL;
+
 const Dashboard = () => {
     const { user, logout } = useAuth();
     const { products, addProduct, updateProduct } = useProduct();
@@ -55,7 +57,7 @@ const Dashboard = () => {
             price: parseFloat(formData.get('price')),
             category: formData.get('category'),
             stock: parseInt(formData.get('stock')),
-            image: formData.get('image') || '/images/placeholder.png'
+            image: formData.get('image') || `${B}images/placeholder.png`
         };
 
         if (editingProduct) {
@@ -123,7 +125,7 @@ const Dashboard = () => {
     return (
         <div style={{ display: 'flex', minHeight: '100vh', paddingTop: '80px', fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}>
             {/* Sidebar */}
-            <div style={{ width: '250px', background: "linear-gradient(rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.2)), url('/images/adminn.png') no-repeat center center / cover", color: 'white', padding: '20px', display: 'flex', flexDirection: 'column', fontFamily: "'Playfair Display', serif" }}>
+            <div style={{ width: '250px', background: `linear-gradient(rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.2)), url('${B}images/adminn.png') no-repeat center center / cover`, color: 'white', padding: '20px', display: 'flex', flexDirection: 'column', fontFamily: "'Playfair Display', serif" }}>
                 <h2 style={{ marginBottom: '40px', display: 'flex', alignItems: 'center', gap: '10px', fontSize: '1.8rem', textShadow: '2px 2px 4px black' }}>
                     <Activity color="#4ade80" /> Admin
                 </h2>
@@ -141,7 +143,7 @@ const Dashboard = () => {
             </div>
 
             {/* Main Content */}
-            <div style={{ flex: 1, padding: '40px', overflowY: 'auto', background: "linear-gradient(rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.3)), url('/images/adminn.png') no-repeat center center / cover" }}>
+            <div style={{ flex: 1, padding: '40px', overflowY: 'auto', background: `linear-gradient(rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.3)), url('${B}images/adminn.png') no-repeat center center / cover` }}>
                 <header style={{ marginBottom: '30px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <h1 style={{ color: '#ecfccb', margin: 0, fontFamily: 'Playfair Display, serif', textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>{activeTab === 'leaves' ? 'Leave Requests' : activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}</h1>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -166,7 +168,7 @@ const Dashboard = () => {
                             animate={{ scale: 1, opacity: 1 }} 
                             exit={{ scale: 0.9, opacity: 0 }}
                             style={{ 
-                                background: "linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url('/images/adminn.png') no-repeat center center / cover", 
+                                background: `linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url('${B}images/adminn.png') no-repeat center center / cover`, 
                                 padding: '30px', 
                                 borderRadius: '15px', 
                                 width: '500px', 

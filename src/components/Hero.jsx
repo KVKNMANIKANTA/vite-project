@@ -3,12 +3,14 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "./Hero.css";
 
+const B = import.meta.env.BASE_URL;
+
 const villageScenes = [
   {
     name: "Harvest",
-    img: "/images/img1.png", 
-    leftImg: "/images/img2.png",
-    rightImg: "/images/img3.png",
+    img: `${B}images/img1.png`, 
+    leftImg: `${B}images/img2.png`,
+    rightImg: `${B}images/img3.png`,
     leftStyle: {
       width: "320px",
       height: "240px",
@@ -37,9 +39,9 @@ const villageScenes = [
   },
   {
     name: "Market",
-    img: "/images/img2.png", 
-    leftImg: "/images/img3.png",
-    rightImg: "/images/img1.png",
+    img: `${B}images/img2.png`, 
+    leftImg: `${B}images/img3.png`,
+    rightImg: `${B}images/img1.png`,
     title: "Village Market",
     leftStyle: {
       width: "320px",
@@ -68,9 +70,9 @@ const villageScenes = [
   },
   {
     name: "Community",
-    img: "/images/img3.png", 
-    leftImg: "/images/img1.png",
-    rightImg: "/images/img2.png",
+    img: `${B}images/img3.png`, 
+    leftImg: `${B}images/img1.png`,
+    rightImg: `${B}images/img2.png`,
     title: "Rural Bliss",
     leftStyle: {
       width: "320px",
@@ -152,7 +154,7 @@ const Hero = () => {
          muted 
          playsInline
        >
-         <source src="/videos/home1.mp4" type="video/mp4" />
+         <source src={`${B}videos/home1.mp4`} type="video/mp4" />
        </video>
        <div className="hero-overlay" />
       

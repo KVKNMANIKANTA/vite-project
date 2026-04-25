@@ -1,25 +1,27 @@
+const B = import.meta.env.BASE_URL;
+
 export const products = {
   dairy: [
-    { id: 101, name: "Organic Milk", price: 4.50, stock: 50, image: "/images/milk.svg", category: "Dairy" },
-    { id: 102, name: "Farm Butter", price: 6.00, stock: 30, image: "/images/butter.svg", category: "Dairy" },
-    { id: 103, name: "Greek Yogurt", price: 3.20, stock: 45, image: "/images/yogurt.svg", category: "Dairy" },
-    { id: 104, name: "Cheddar Cheese", price: 8.50, stock: 20, image: "/images/cheese.svg", category: "Dairy" },
+    { id: 101, name: "Organic Milk", price: 4.50, stock: 50, image: `${B}images/milk.svg`, category: "Dairy" },
+    { id: 102, name: "Farm Butter", price: 6.00, stock: 30, image: `${B}images/butter.svg`, category: "Dairy" },
+    { id: 103, name: "Greek Yogurt", price: 3.20, stock: 45, image: `${B}images/yogurt.svg`, category: "Dairy" },
+    { id: 104, name: "Cheddar Cheese", price: 8.50, stock: 20, image: `${B}images/cheese.svg`, category: "Dairy" },
   ],
   vegetables: [
-    { id: 201, name: "Fresh Spinach", price: 2.50, stock: 100, image: "/images/spinach.svg", category: "Vegetables" },
-    { id: 202, name: "Carrots", price: 1.80, stock: 150, image: "/images/carrots.svg", category: "Vegetables" },
-    { id: 203, name: "Broccoli", price: 3.00, stock: 80, image: "/images/broccoli.svg", category: "Vegetables" },
-    { id: 204, name: "Bell Peppers", price: 2.20, stock: 60, image: "/images/peppers.svg", category: "Vegetables" },
+    { id: 201, name: "Fresh Spinach", price: 2.50, stock: 100, image: `${B}images/spinach.svg`, category: "Vegetables" },
+    { id: 202, name: "Carrots", price: 1.80, stock: 150, image: `${B}images/carrots.svg`, category: "Vegetables" },
+    { id: 203, name: "Broccoli", price: 3.00, stock: 80, image: `${B}images/broccoli.svg`, category: "Vegetables" },
+    { id: 204, name: "Bell Peppers", price: 2.20, stock: 60, image: `${B}images/peppers.svg`, category: "Vegetables" },
   ],
   fruits: [
-    { id: 301, name: "Red Apples", price: 3.50, stock: 120, image: "/images/apples.svg", category: "Fruits" },
-    { id: 302, name: "Bananas", price: 1.20, stock: 200, image: "/images/bananas.svg", category: "Fruits" },
-    { id: 303, name: "Strawberries", price: 5.00, stock: 40, image: "/images/strawberries.svg", category: "Fruits" },
-    { id: 304, name: "Avocados", price: 4.00, stock: 50, image: "/images/avocado.svg", category: "Fruits" },
+    { id: 301, name: "Red Apples", price: 3.50, stock: 120, image: `${B}images/apples.svg`, category: "Fruits" },
+    { id: 302, name: "Bananas", price: 1.20, stock: 200, image: `${B}images/bananas.svg`, category: "Fruits" },
+    { id: 303, name: "Strawberries", price: 5.00, stock: 40, image: `${B}images/strawberries.svg`, category: "Fruits" },
+    { id: 304, name: "Avocados", price: 4.00, stock: 50, image: `${B}images/avocado.svg`, category: "Fruits" },
   ],
   accessories: [
-    { id: 401, name: "Jute Bag", price: 5.00, stock: 100, image: "/images/bag.svg", category: "Accessories" },
-    { id: 402, name: "Bamboo Straws", price: 8.00, stock: 50, image: "/images/straws.svg", category: "Accessories" },
+    { id: 401, name: "Jute Bag", price: 5.00, stock: 100, image: `${B}images/bag.svg`, category: "Accessories" },
+    { id: 402, name: "Bamboo Straws", price: 8.00, stock: 50, image: `${B}images/straws.svg`, category: "Accessories" },
   ]
 };
 
